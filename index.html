@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./public/build/tailwind.css">
+</head>
+<body class="font-mono">
+    
+    <div class="w-full h-full relative flex flex-col items-center">
+        <h1 class="text-5xl pt-10 mb-32 border-b-2 border-blue-300 text-gray-700">Library</h1>
+        <button id="add-new-book" class="fixed bottom-5 right-5 rounded-full bg-blue-600 text-white focus:outline-none">
+            <svg class="w-20 h-20 rounded-full hover:bg-blue-500 active:bg-blue-700" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </button>
+
+        <div id="add-new-book-form" class="relative hidden flex-col items-center justify-between bg-white shadow-lg">
+            <form class="m-10">
+                <button id="close-form" class="absolute top-0 right-0 transform hover:-rotate-45 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="#E90441">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+                <label>
+                    <p class="mt-3 text-center text-gray-700">Title</p>
+                    <input class="border-2 focus:border-gray-300 focus:outline-none" type="text" name="title">
+                </label>
+
+                <label>
+                    <p class="mt-3 text-center text-gray-700">Author</p>
+                    <input class="border-2 focus:border-gray-300 focus:outline-none" type="text" name="author">
+                </label>
+
+                <label>
+                    <p class="mt-3 text-center text-gray-700">Pages</p>
+                    <input class="border-2 focus:border-gray-300 focus:outline-none" type="number" name="pages">
+                </label>
+                <br>
+
+                <label class="flex flex-col items-center">
+                    <p class="mt-3 text-center text-gray-700">Read status</p>
+                    <input class="w-1/2 h-8 cursor-pointer mt-1 rounded-md text-white bg-purple-500 hover:bg-purple-400 active:bg-purple-500" type="button" value="Read" name="read-status">
+                </label>
+                <br>
+                <label class="flex justify-center">
+                    <button class="w-1/2 h-8 text-lg bg-blue-600 text-white hover:bg-blue-500 active:bg-blue-700 focus:outline-none rounded-md" type="submit" id="add-book">Add book</button>
+                </label>
+            </form>
+        </div>
+
+        <div id="books" class="grid grid-cols-3 gap-10"></div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>

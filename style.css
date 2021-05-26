@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Poppins:wght@100&display=swap');
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(243, 244, 246);
+}
+
+.book {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 20rem;
+    height: 15rem;
+    padding: 20px;
+    background-color: white;
+    color: rgb(24, 23, 23);
+    font-size: 1.3rem;
+    box-shadow: 0 10px 10px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.delete-book {
+    font-size: 2rem;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    font-family: 'Acme', sans-serif;
+    color: rgb(233, 20, 55);
+}
+
+.delete-book:focus {
+    outline: none;
+}
+
+.delete-book:hover {
+    width: 1.3rem;
+    color: rgb(243, 70, 70);
+    transform: rotate(90deg);
+}
+
+.delete-book:active {
+    color: rgb(212, 10, 44);
+}
+
+.read-status {
+    width: 70%;
+    height: 2rem;
+    cursor: pointer;
+    color: white;
+}
+
+.read-status:hover {
+    opacity: 90%;
+}
+
+.read-status:active {
+    opacity: 100%;
+}
